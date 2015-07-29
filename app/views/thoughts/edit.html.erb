@@ -1,0 +1,16 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Edit Idea</h1>
+        <form role="form" action = '/thoughts/<%=@thought.id%>/update'>
+          <div class="form-group">
+            <label for="idea" class="control-label">Idea</label>
+            <input type="text" class="form-control" name="name" value = "<%=@thought.name%>">
+            </div>
+            <input type="submit" class="btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
