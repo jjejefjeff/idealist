@@ -1,12 +1,29 @@
 <center><h1> List of Ideas created by people like you!</h1></center>
-<% @ideas.each do |idea|%>
-  <div class="stripe">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <%= idea.name  %> - <a href="/idea/<%= idea.id%>">show </a> | <a href="/idea/<%= idea.id%>/edit"> edit </a> | <a href="idea/<%= idea.id%>/destroy">destroy</a>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ideas</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Your list of ideas</h1>
+        <p>
+          <a href="/new_idea">Create a new idea</a>
+        </p>
+        <div class="list-group">
+          <% @ideas.each do |idea|%>
+          <a href="/idea/<%=idea.id%>" class="list-group-item"><%=idea.name%></a>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-<% end %>

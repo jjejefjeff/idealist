@@ -6,8 +6,6 @@ class IdeaController < ApplicationController
   def create
     @idea = Idea.new
     @idea.name = params['name']
-    @idea.description = params['description']
-    @idea.creator = params['creator']
     if @idea.save
       redirect_to "/idea/#{ @idea.id }"
     else
@@ -30,8 +28,6 @@ class IdeaController < ApplicationController
   def editing
     @idea = Idea.find_by(id: params['id'])
     @idea.name = params['name']
-    @idea.description = params['description']
-    @idea.creator = params['creator']
     if @idea.save
       redirect_to "/idea/#{ @idea.id }"
     else

@@ -1,26 +1,32 @@
-<div class="stripe">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Navigation
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="/idea">Back to Index</a></li>
-              <li><a href="/idea/<%=@idea.id%>/edit">Edit Idea</a></li>
-              <li><a href="/new_idea">New Idea</a></li>
-              <li><a href="/idea/<%=@idea.id%>/remove">Destroy Idea</a></li>
-            </ul>
-          </div>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ideas</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><%=@idea.name%> 
+          <small>
+            <a href="/idea/<%=@idea.id%>/edit">Edit</a> |
+            <a href="/idea/<%=@idea.id%>/remove">Destroy</a> 
+          </small></h1>
+        <div>
+          
         </div>
-        <div class ="col-md-8">
-          <p></p>
-          <h1> <%=@idea.name%> <small> by <%=@idea.creator%> </small> </h1>
-          <p> <%=@idea.description%> </p>
+        <div>
+          <a href="/idea">Back to list of ideas</a> | 
+          <a href="/new_idea">Create a new idea</a>
         </div>
       </div>
+    </div>
   </div>
-</div>
-
+  
